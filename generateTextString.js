@@ -18,4 +18,20 @@ console.log(makeid());
 
 /*
 NOTE: When using this in test, make sure the test outputs/logs the value generated, in the event you need it to troubleshoot.
+NOTE: 
+Here's the shorter and harder to read version:
+
+    function makeid() {
+      var rest = "";
+      var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      var lowercase = "abcdefghijklmnopqrstuvwxyz";
+      var numeric = "0123456789";
+
+      for (var i = 0; i < 4; i++)
+        rest += lowercase.charAt(Math.floor(Math.random() * lowercase.length));
+        return uppercase.charAt(Math.floor(Math.random() * 10)) + rest + numeric.charAt(Math.floor(Math.random() * 10));
+    }
+
+    console.log(makeid());
+
 */
